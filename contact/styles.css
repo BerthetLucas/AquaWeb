@@ -1,0 +1,261 @@
+*{
+  margin:0; 
+  padding : 0;
+  font-family: 'Merienda', cursive;
+}
+
+body {
+  background-color: #FEC606;
+  font-family: 'Merienda', cursive;
+}
+
+/*PARTIE HEADER*/
+
+
+
+.logo {
+  height : 6em;
+  width : auto
+}
+
+header {
+
+  background-size: cover;
+  background-position: center;
+
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap : 4em; 
+  margin-right : 15em
+}
+
+nav a {
+      --s: 0.1em;   /* the thickness of the line */
+      --c: #1095c1; /* the color */
+      
+      color: #0000;
+      padding-bottom: var(--s);
+      background: 
+        linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+        linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+      -webkit-background-clip: text,padding-box;
+              background-clip: text,padding-box;
+      transition: 0.5s;
+}
+
+nav a:hover {
+  --_p: 100%
+}
+
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap : 1em; 
+  margin-left : 12em
+}
+
+.mainmenu {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom : 5em; 
+  padding-top : 1em
+}
+
+/*PAGE CONTACT*/
+h1 {
+  margin: 0;
+  position : static; /*Déplacer l'image au-dessus des éléments*/
+  z-index : 1; /*Placement des éléments avec le z-index*/
+}
+
+/*former 2 blocs : explications du contact et formulaire*/
+.container {
+  width : 50%;
+  margin-right: auto;
+  margin-left: auto;
+  display : flex; /*créer deux blocs côte à côte*/
+  align-items: center; /*centrer les éléments à l'intérieur des blocs*/
+}
+
+.bloc_01 {
+  background-color: #FEF503;
+  width: 30%;
+  padding : 30px;
+  margin-right : 5%;
+  border-radius :25px;
+  box-shadow: 7px 8px 9px -1px #000000;
+  position: static;
+  z-index: 1;
+}
+
+.bloc_02 {
+  background-color: white;
+  padding : 50px;
+  width : 50%;
+  border-radius :25px;
+  box-shadow: 7px 8px 9px -1px #000000;
+}
+
+label, input, textarea {
+  /*Retour à la ligne automatique*/
+  display : block;
+  width : 100%;
+  margin-top: 5px;
+}
+
+input, textarea {
+  border-radius: 10px;
+  margin-bottom: 2em;
+  padding : 5px;
+  /*Ajouter de l'ombre derrière la case*/
+  box-shadow: 7px 7px 4px -4px #FEC606;
+}
+
+textarea {
+  padding-right : 9px;
+  border: 2px solid black;
+}
+
+button {
+  /*Centrer le bouton et le styliser*/
+  display : block;
+  margin : auto;
+  font-family: 'Merienda', cursive;
+  --color : black;
+  /*Couleur de fond*/
+  background-color: white;
+  /*Changement de couleur lors du hover*/
+  --hover : #FEC606;
+  border-radius: 20px;
+  margin-top : 20px;
+  padding : 5px;
+  padding-left : 20px;
+  padding-right : 20px;
+  /*Ombre du bouton*/
+  box-shadow: 7px 7px 4px -4px #FEC606;
+}
+
+/*TEST ANIMATION BOUTON*/
+button {  
+  color: var(--color);
+  transition: 0.25s;
+  &:hover,
+  &:focus { 
+  border-color: var(--hover);
+  background-color: #FEC606;
+  box-shadow: none;
+  }
+}
+
+/*PETITE DECORATION AVEC DES IMAGES AVEC DES PROPRIETES POSITION ET Z-INDEX :P*/
+.image_vectorielle_contact {
+  max-width: 450px; /*Changer la taille de l'image*/
+  height : auto; /*Garder la hauteur de l'image*/
+  position : absolute; /*Déplacer l'image au-dessus des éléments*/
+  z-index : 0; /*Placement des éléments avec le z-index*/
+  left : 100px; 
+  bottom : 400px;
+}
+
+.image_palmier {
+  max-width: 400px;
+  height : auto;
+  position : absolute;
+  right : 150px;
+  bottom : 150px;
+}
+
+/*PARTIE FOOTER*/
+.footer-distributed {
+  background-color: #FEC606;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
